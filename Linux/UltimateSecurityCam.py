@@ -15,7 +15,7 @@ kernel = np.ones((5,5), np.uint8)
 background = None
 
 # Write test video
-fps = 2 #camera.get(cv2.CAP_PROP_FPS)
+fps = 10 #camera.get(cv2.CAP_PROP_FPS)
 pygame.mixer.init()
 cameraSound = pygame.mixer.Sound("snapshotsound.ogg")
 size = (int(camera.get(cv2.CAP_PROP_FRAME_WIDTH)),
@@ -71,7 +71,8 @@ while (True):
 		cameraSound.play()
 
 	for c in cnts:
-		if cv2.contourArea(c) < 1500:
+		if cv2.contourArea(c) < (background.shape[0]*background.shape[1])/204:
+			#minimum area to be calculated based on image size and camera megapixels
 			continue
 		# Calculate the bounding box
 		(x, y, w, h) = cv2.boundingRect(c)
