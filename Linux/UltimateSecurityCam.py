@@ -15,7 +15,7 @@ kernel = np.ones((5,5), np.uint8)
 background = None
 
 # Write test video
-fps = 10 #camera.get(cv2.CAP_PROP_FPS)
+fps = 2 #camera.get(cv2.CAP_PROP_FPS)
 pygame.mixer.init()
 cameraSound = pygame.mixer.Sound("snapshotsound.ogg")
 size = (int(camera.get(cv2.CAP_PROP_FRAME_WIDTH)),
