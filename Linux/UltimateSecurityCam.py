@@ -20,7 +20,10 @@ pygame.mixer.init()
 cameraSound = pygame.mixer.Sound("snapshotsound.ogg")
 size = (int(camera.get(cv2.CAP_PROP_FRAME_WIDTH)),
 		int(camera.get(cv2.CAP_PROP_FRAME_HEIGHT)))
-videoWriter = cv2.VideoWriter('basic_motion_detection.avi',
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
+videoWriter = cv2.VideoWriter(os.path.join(str(dir_path),'basic_motion_detection.avi'),
 				  cv2.VideoWriter_fourcc('D', 'I', 'V', 'X'),
 				  fps, size)
 
