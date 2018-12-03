@@ -33,8 +33,8 @@ final = initial + 4
 while (final-initial):
 	#start timer on the frames
 	ret, frame = camera.read()
-	Text = "Starting in " + str(final-initial) + "..."
-	cv2.putText(frame,Text,(60,30),cv2.FONT_HERSHEY_TRIPLEX,1,(0,100,255),2)
+	initailiztion_text = "Starting in " + str(final-initial) + "..."
+	cv2.putText(frame,initailiztion_text,(60,30),cv2.FONT_HERSHEY_TRIPLEX,1,(0,100,255),2)
 	cv2.imshow("contours",frame)
 	
 	if cv2.waitKey(int(45)) &0xff == ord('q'):
@@ -42,7 +42,7 @@ while (final-initial):
 	
 	elif int(time.time()) == (initial + 1):
 		initial = initial + 1
-		print(str(final-initial) + "...")
+		#print(str(final-initial) + "...")
 		
 	
 while (True):
@@ -64,8 +64,11 @@ while (True):
 	# Calculate the outline of the target in the image
 	image, cnts, hierarchy = cv2.findContours(diff.copy(),
 						  cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-	print ("Detecting " + str(len(cnts)) + " Moving Objects")
+	detection_text = ("Detecting " + str(len(cnts)) + " Moving Objects")
+	detection_text_colour = (0,255,0) 	#set as green
 	if len(cnts) > 0:
+		#if breach detected
+		detection_text_colour = (0,0,255)   #set to red
 		cameraSound.play()
 
 	for c in cnts:
@@ -76,6 +79,8 @@ while (True):
 		(x, y, w, h) = cv2.boundingRect(c)
 		cv2.rectangle(frame, (x,y), (x+w, y+h), (0,255,0), 2)
 
+	#print(detection_text)
+	cv2.putText(frame,detection_text,(60,30),cv2.FONT_HERSHEY_DUPLEX,1,detection_text_colour,2)
 	cv2.imshow("contours", frame)
 	videoWriter.write(frame)
 	cv2.imshow("dif", diff)
