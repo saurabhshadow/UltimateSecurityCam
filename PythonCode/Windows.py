@@ -66,7 +66,8 @@ while (True):
 		cameraSound.play()
 
 	for c in cnts:
-		if cv2.contourArea(c) < 1500:
+		if cv2.contourArea(c) < (background.shape[0]*background.shape[1])/204:
+			#minimum area to be calculated based on image size and camera megapixels
 			continue
 		# Calculate the bounding box
 		(x, y, w, h) = cv2.boundingRect(c)
