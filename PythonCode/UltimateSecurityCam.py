@@ -35,7 +35,7 @@ while (final-initial):
 	ret, frame = camera.read()
 	initailiztion_text = "Starting in " + str(final-initial) + "..."
 	cv2.putText(frame,initailiztion_text,(60,30),cv2.FONT_HERSHEY_TRIPLEX,1,(0,100,255),2)
-	cv2.imshow("contours",frame)
+	cv2.imshow("Ultimate Security Camera",frame)
 	
 	if cv2.waitKey(int(45)) &0xff == ord('q'):
 		break
@@ -81,10 +81,17 @@ while (True):
 
 	#print(detection_text)
 	cv2.putText(frame,detection_text,(60,30),cv2.FONT_HERSHEY_DUPLEX,1,detection_text_colour,2)
-	cv2.imshow("contours", frame)
+	diff = cv2.cvtColor(diff, cv2.COLOR_GRAY2BGR)			#3 channel gray scaled image
+	
+	horizontal_stack = np.hstack((frame, diff))				#proper way to stack 3D arrays
+	merged_windows = np.concatenate((frame, diff), axis=1)
+
+	cv2.imshow("Ultimate Security Camera", merged_windows)
+	
+	#cv2.imshow("contours", frame)
 	videoWriter.write(frame)
-	cv2.imshow("dif", diff)
-	# cv2.imwrite('didff.jpg', diff)
+	#cv2.imshow("dif", diff)
+	#cv2.imwrite('didff.jpg', diff)
 	
 	keypress = cv2.waitKey(45)
 	if keypress:
