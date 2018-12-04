@@ -41,6 +41,8 @@ If the difference is more than a threshold , we'll consider a breach happening.
 
 
 ## Setup instructions
+### To install the required packages use the following command in command prompt[windows] OR terminal[Unix]:
+`pip3 install -r requirements.txt`
 ---
 [(Back to top)](#list-of-contents)
 - To run , simply copy the code in the `UltimateSecurityCam.py` and run it.
