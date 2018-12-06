@@ -41,18 +41,20 @@ If the difference is more than a threshold , we'll consider a breach happening.
 
 
 ## Setup instructions
-### To install the required packages use the following command in command prompt[windows] OR terminal[Unix]:
-`pip3 install -r requirements.txt`
 ---
 [(Back to top)](#list-of-contents)
-- To run , simply copy the code in the `UltimateSecurityCam.py` and run it.
+
+## Initialisation :
+To install the required packages use the following command in command prompt[windows] OR terminal[Unix]:
+`pip3 install -r requirements.txt`
+
+## Running instructions : 
+- Windows: Open up `UltimateSecurityCam.py` in your preferred python IDE [windows.py](PythonCode/Windows.py)
+- Linux: Open the terminal in the `PythonCode` directory, copy the code `python UltimateSecurityCam.py` and run it.
 - More formally , fork the code , and clone it your machine . I recommend that you use the GitH desktop app.
   - If you need a python IDE , I recommend using pycharm. [Tutorial to install : ](https://www.youtube.com/watch?v=QzcaEELafkE).
   - If you get an error , make sure all the **import statements are working** , if not , install using pip-install [tutorial](https://www.youtube.com/watch?v=237dNNQhD3Q)
 
-
-## Running instructions : 
-- Open up StarterCode.py in your preferred python IDE [windows.py](PythonCode/Windows.py)
 
 
 ## Running
