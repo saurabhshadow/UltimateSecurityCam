@@ -1,8 +1,9 @@
-# coding=utf-8
+﻿# coding=utf-8
 
 import cv2
 import numpy as np
 import pygame
+import json
 import time, sys, os
 
 #if you get error while importing the google how to install <Package Name> in python 3.6
@@ -22,8 +23,9 @@ size = (int(camera.get(cv2.CAP_PROP_FRAME_WIDTH)),
 		int(camera.get(cv2.CAP_PROP_FRAME_HEIGHT)))
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
+videofile = "basic_motion_detection.avi"
 
-videoWriter = cv2.VideoWriter(os.path.join(str(dir_path),'basic_motion_detection.avi'),
+videoWriter = cv2.VideoWriter(os.path.join(str(dir_path),videofile),
 				  cv2.VideoWriter_fourcc('D', 'I', 'V', 'X'),
 				  fps, size)
 
@@ -44,8 +46,9 @@ while (final-initial):
 	elif int(time.time()) == (initial + 1):
 		initial = initial + 1
 		#print(str(final-initial) + "...")
-		
-	
+
+maxcnts=0		
+start = time.time()	
 while (True):
 	ret, frame = camera.read()
 	# The first frame as the background
@@ -80,6 +83,9 @@ while (True):
 		(x, y, w, h) = cv2.boundingRect(c)
 		cv2.rectangle(frame, (x,y), (x+w, y+h), (0,255,0), 2)
 
+	#maximum object detected
+	if len(cnts)>maxcnts: maxcnts=len(cnts)
+		
 	#print(detection_text)
 	cv2.putText(frame,detection_text,(60,30),cv2.FONT_HERSHEY_DUPLEX,1,detection_text_colour,2)
 
@@ -105,3 +111,32 @@ while (True):
 
 cv2.destroyAllWindows()
 camera.release()
+
+end = time.time() 
+
+confirm = input("Do you wish to save the current configs? [Y/N]: ")
+#if run with python2 use raw_input
+
+data={"Date and Time":time.asctime(time.localtime(time.time())),
+	 "Camera FPS":fps,
+	 "Threshold":THRESHOLD,
+	 "Max Objects":maxcnts,
+	 "Video File":"basic_motion_detection.avi",
+	 "Path":dir_path,
+	 "Duration": '%0.2f' %(end-start)}
+
+configfile = "config.txt"
+
+if confirm.startswith('y' or 'Y'):
+	print("\nUpdating config file...")
+	with open(configfile,'w') as jfile:
+		json.dump(data, jfile, indent = 4)
+	print("Data updated to " + configfile + " successfully!")
+		
+elif confirm.startswith('n' or 'N'):
+	pass
+
+else:
+	print("Invalid input!")
+	
+print("Program succesfully terminated!")
