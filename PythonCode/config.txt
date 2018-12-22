@@ -1,0 +1,9 @@
+{
+    "Date and Time": "Sun Dec 23 03:47:01 2018",
+    "Camera FPS": 2,
+    "Threshold": 40,
+    "Max Objects": 17,
+    "Video File": "basic_motion_detection.avi",
+    "Path": "/home/johri/github/UltimateSecurityCam/latest 23-12/UltimateSecurityCam/PythonCode",
+    "Duration": "7.88"
+}
