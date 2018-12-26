@@ -20,11 +20,6 @@
 ### Edge detection:
 ![edge detection](https://pythonprogramming.net/static/images/opencv/opencv-edge-detection.png)
 
-### Feature matching for object recognition:
-![Object recognition](https://pythonprogramming.net/static/images/opencv/opencv-feature-matching.png)
-
-### General object recognition:
-![General recognition](https://pythonprogramming.net/static/images/opencv/opencv-intro-tutorial-python.gif)
 
 ## How it Works?🔧
 
