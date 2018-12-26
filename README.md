@@ -26,6 +26,7 @@
 
 
 ---
+
 ## Introduction
 [(Back to top👆🏻)](#table-of-content)
 - This is a security camera software which detects any intruder and alerts the owner .
@@ -53,8 +54,6 @@ If the difference is more than a threshold , we'll consider a breach happening.
 	- All the configurations of the video clip are recorded (like Date and Time, camera fps, maximum object movement recorded at a time, duration, etc.)
 	- The video clip and configuration data is saved for future reference and the code terminates.
 	
-
----
 ## Setup instructions
 [(Back to top👆🏻)](#table-of-content)
 
@@ -64,6 +63,8 @@ To install the required packages use the following command in command prompt[win
  pip3 install -r requirements.txt
 ````
 
+## Running instructions :
+=======
 ## Working on the code:
 - Windows: Open up `UltimateSecurityCam.py` in your preferred python IDE [windows.py](PythonCode/Windows.py)
 - Linux: Open the terminal in the `PythonCode` directory, copy the code `python3 UltimateSecurityCam.py` and run it.
@@ -71,8 +72,6 @@ To install the required packages use the following command in command prompt[win
   - If you need a python IDE , I recommend using pycharm. [Tutorial to install !](https://www.youtube.com/watch?v=QzcaEELafkE).
   - If you get an error , make sure all the **import statements are working** , if not , install using pip-install [Tutorial](https://www.youtube.com/watch?v=237dNNQhD3Q).
 
-
----
 ## Running 
 [(Back to top👆🏻)](#table-of-content)
 
@@ -84,6 +83,8 @@ Command (with PythonCode as the working directory):
 
 
 ### Running instructions:
+
+- Open up `UltimateSecurityCam.py` in your preferred python IDE [UltimateSecurityCam.py](PythonCode/UltimateSecurityCam.py)
 - Open up `UltimateSecurityCam.py` in your preferred python IDE [UltimateSecurityCam.py](PythonCode/UltimateSecurityCam.py) or run on command prompt using the command (in `PythonCode` directory)
 	run the command `python3 UltimateSecurityCam.py`.
 - Run using python 3.6 (recommended).
@@ -91,8 +92,6 @@ Command (with PythonCode as the working directory):
 
 Many improvements and developments are in the pipeline! To know more, contact on github or niteshx22@gmail.com
 
-
----
 ## Get in touch
 [(Back to top👆🏻)](#table-of-content)
 
