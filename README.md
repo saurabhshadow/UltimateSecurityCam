@@ -90,11 +90,8 @@ Many improvements and developments are in the pipeline! To know more, contact on
 [(Back to top👆🏻)](#table-of-content)
 
 [<img src="https://image.flaticon.com/icons/svg/185/185964.svg" width="35" padding="10">](https://www.linkedin.com/in/niteshx2/)
-
 [<img src="https://image.flaticon.com/icons/svg/185/185985.svg" width="35" padding="10">](https://www.instagram.com/nitz_chaudhry/)
-
 [<img src="https://image.flaticon.com/icons/svg/185/185981.svg" width="35" padding="10">](https://www.facebook.com/niteshx2)
-
 [<img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="35" padding="10">](https://github.com/NIteshx2)
 
 <p align="center"> Made with ❤ by <a href="https://github.com/NIteshx2">Nitesh Chaudhry</a></p>
