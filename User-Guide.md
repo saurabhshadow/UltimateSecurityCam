@@ -3,7 +3,7 @@
 ## About UltimateSecurityCam <img src="https://image.flaticon.com/icons/svg/810/810257.svg" width="40" padding="15">
 ---
 
-* <p>“Can my security camera be hacked👨‍💻?” “How do I know if someone is watching me through my home security IP camera?” Maybe few of you have ever considered this carefully. So we are introducing UltimateSecurityCam to resolve these issues.</p>
+* <p>"Do I always need dedicated staff to ensure the seurity of the premises secured by the camera ?" . "Can't a camera do the task of montoring itself ? "  Our camera will solve these real - life problems</p>
 
 * An easy-to-build, un-hackable security software which detects any intruder and alerts the owner.
 
