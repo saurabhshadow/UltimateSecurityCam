@@ -101,4 +101,7 @@ Many improvements and developments are in the pipeline! To know more, contact on
 [<img src="https://image.flaticon.com/icons/svg/185/185981.svg" width="35" padding="10">](https://www.facebook.com/niteshx2)
 [<img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="35" padding="10">](https://github.com/NIteshx2)
 
+## Contribute
+Found a bug, please [create an issue](https://github.com/njackwinterofcode/UltimateSecurityCam/issues)
+
 <p align="center"> Made with ❤ by <a href="https://github.com/NIteshx2">Nitesh Chaudhry</a></p>
